@@ -1,13 +1,13 @@
 #!/bin/sh
 
 
-# $B0z?t(B:text2bingram$B$N2aDx$G$G$-$?(B ---.vocab$B%U%!%$%k(B
-# $BNc(B: sh mkvocab.sh ./sample_corpus.vocab
+# 引数:text2bingramの過程でできた ---.vocabファイル
+# 例: sh mkvocab.sh ./sample_corpus.vocab
 #
-# $B=PNO(B:---.dict
-# $B$3$N(Bdict$B%U%!%$%k$r!$$5$i$K@07A$9$l$P$h$$!%(B
+# 出力:---.dict
+# このdictファイルを，さらに整形すればよい．
 name=`echo $1|cut -d"." -f1`
 
-cat $1 | nkf -e | kakasi -JH | nkf -w > ${name}.yomi
+cat $1 | nkf -e | kakasi -KH -JH | nkf -w > ${name}.yomi
 paste $1 ${name}.yomi > ${name}.paste
 perl myYomi2Voca.pl ${name}.paste > ${name}.dict

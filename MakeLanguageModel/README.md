@@ -17,14 +17,15 @@ make
 sudo make install  
 
 # 他のインストールするもの
-sudo apt-get install nkf
-sudo apt-get install kakasi
+sudo apt-get install nkf  
+sudo apt-get install kakasi  
 
 # 言語モデル作成
 sh text2bingram.sh 学習テキストファイル名 語彙数  
 
 # 発音モデル作成
-sh mkvocab.sh  
+sh mkvocab.sh text2bingram.shでできた.vocabファイル  
+
 最後に，第一エントリの単語を[]でくくって，第二エントリにすればよい  
 before  
 鼻	h a n a  
