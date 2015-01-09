@@ -16,7 +16,16 @@ cd julius-4.3.1/
 make  
 sudo make install  
 
-# 言語モデル作成
-sh text2bingram 学習テキストファイル名 語彙数
+# 他のインストールするもの
+sudo apt-get install nkf
+sudo apt-get install kakasi
 
-# 
+# 言語モデル作成
+sh text2bingram.sh 学習テキストファイル名 語彙数  
+sh mkvocab.sh  
+最後に，第一エントリの単語を[]でくくって，第二エントリにすればよい  
+before  
+鼻	h a n a  
+
+after  
+鼻 [鼻] h a n a  
