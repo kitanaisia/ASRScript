@@ -23,6 +23,9 @@ sudo apt-get install kakasi
 # 言語モデル作成
 sh text2bingram.sh 学習テキストファイル名 語彙数  
 
+大規模コーパスの場合，/usr/tmpに一時ファイルが出力される．
+フォルダの有無，アクセス権限に注意．必要あれば，sudoで実行するなど．
+
 # 発音モデル作成
 sh mkvocab.sh text2bingram.shでできた.vocabファイル  
 
