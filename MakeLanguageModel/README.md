@@ -22,6 +22,8 @@ sudo apt-get install kakasi
 
 # 言語モデル作成
 sh text2bingram.sh 学習テキストファイル名 語彙数  
+
+# 発音モデル作成
 sh mkvocab.sh  
 最後に，第一エントリの単語を[]でくくって，第二エントリにすればよい  
 before  
